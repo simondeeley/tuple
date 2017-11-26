@@ -13,6 +13,7 @@ namespace simondeeley;
 use SplFixedArray;
 use InvalidArgumentException;
 use OutOfRangeException;
+use simondeeley\Type\TupleType;
 use simondeeley\Type\TypeEquality;
 use simondeeley\ImmutableArrayTypeObject;
 
