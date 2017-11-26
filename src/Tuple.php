@@ -40,12 +40,12 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
      * Instantiates a new tuple object of fixed length with the provided data
      * set. Once the object is created, it's contents cannot be mutated.
      *
-     * @param array ...$items - Variadic number of arguments
+     * @param mixed ...$items - Variadic number of arguments
      * @return void
      * @throws OutOfRangeException - Thrown if number of arguments passed
      *                               exceeds maximum allowed amount
      */
-    final public function __construct(array ...$items)
+    final public function __construct(...$items)
     {
         if (count($items) > self::MAX_LENGTH) {
             throw new OutOfRangeException(sprintf(
