@@ -47,11 +47,11 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
      */
     final public function __construct(...$items)
     {
-        if (count($items) > self::MAX_LENGTH) {
+        if (count($items) > static::MAX_LENGTH) {
             throw new OutOfRangeException(sprintf(
                 'Size of %s exceeds the maximum of %d items',
                 get_class($this),
-                self::MAX_LENGTH
+                static::MAX_LENGTH
             ));
         }
 
