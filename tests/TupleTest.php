@@ -129,7 +129,7 @@ final class TupleTest extends TestCase
      */
     final public function testEquality(Tuple $one, Tuple $two, bool $expected): void
     {
-        $this->assert($expected, $one->equals($two));
+        $this->assertEquals($expected, $one->equals($two));
     }
 
     /**
