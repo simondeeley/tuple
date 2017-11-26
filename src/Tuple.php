@@ -100,7 +100,7 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
      */
     final public function offsetExists($offset): bool
     {
-        if (is_nan($offset)) {
+        if (false === is_int($offset)) {
             throw new InvalidArgumentException(sprintf(
                 'Offset must be of type integer, "%s" passed',
                  gettype($offset)
