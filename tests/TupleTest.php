@@ -33,7 +33,7 @@ final class TupleTest extends TestCase
      */
     final public function instantiateTuple(): void
     {
-        $this->assertInstaceOf(Tuple::class, new _testTuple(1, 2, 3, 4));
+        $this->assertInstanceOf(Tuple::class, new _testTuple(1, 2, 3, 4));
     }
 
     /**
@@ -45,7 +45,7 @@ final class TupleTest extends TestCase
      */
     final public function instantiateWithLessThanMax(): void
     {
-        $this->assertInstaceOf(Tuple::class, new _testTuple(1,2,3));
+        $this->assertInstanceOf(Tuple::class, new _testTuple(1,2,3));
     }
 
     /**
