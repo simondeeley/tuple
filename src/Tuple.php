@@ -13,6 +13,7 @@ namespace simondeeley;
 use SplFixedArray;
 use InvalidArgumentException;
 use OutOfRangeException;
+use simondeeley\Type\Type;
 use simondeeley\Type\TupleType;
 use simondeeley\Type\TypeEquality;
 use simondeeley\ImmutableArrayTypeObject;
@@ -64,11 +65,20 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
      * runs each through a comparitor which serializes each value, if one is
      * not equal to the other then the result will be considered false.
      *
-     * @param Tuple $tuple - The tuple to compare
+     * @param Type $tuple - The tuple to compare
      * @return bool - Returns true if $tuple is equal to $this
      */
-    final public function equals(Tuple $tuple): bool
+    final public function equals(Type $tuple): bool
     {
+        if (false === $tuple instanceof TupleType)
+        {
+            throw new InvalidArgumentException(sprintf(
+                'Cannot compare %s with %s as they are not of the same type',
+                get_class($this),
+                get_class($tuple)
+            ));
+        }
+
         if (0 === count(
             array_udiff($this->data, $tuple->data, function($a, $b) {
                 return (int) strcmp(serialize($a), serialize($b));
