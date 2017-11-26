@@ -52,7 +52,7 @@ final class TupleTest extends TestCase
      * Test throws Exception
      *
      * @test
-     * @expectedException InvalidArgumentException
+     * @expectedException OutOfRangeException
      * @expectedExceptionMessage Size of _testTuple exceeds the maximum of 4 items
      * @final
      * @return void
