@@ -1,0 +1,20 @@
+language: php
+sudo: false
+
+matrix:
+  include:
+    - php: 7.1
+      env: TEST=stable
+    - php: nightly
+      env: TEST=nightly
+  fast_finish: true
+
+cache:
+  - vendor
+
+before_script:
+  - if [ "$TEST" = "stable" ]; then phpenv config-rm xdebug.ini; fi
+  - composer install
+
+script:
+  - phpdbg -qrr vendor/bin/phpunit --bootstrap vendor/autoload.php tests

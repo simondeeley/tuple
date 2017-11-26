@@ -1,0 +1,33 @@
+{
+    "name": "simondeeley/tuple",
+    "description": "An extendable, reusable PHP tuple objet",
+    "type": "library",
+    "keywords": ["php", "tuple", "extendable", "set"],
+    "homepage": "https://github.com/simondeeley",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Simon Deeley",
+            "email": "s.deeley@icloud.com",
+            "homepage": "https://github.com/simondeeley",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/simondeeley/tuple/isues",
+        "source": "https://github.com/simondeeley/tuple",
+        "docs": "https://github.com/simondeeley/tuple/blob/master/README.md"
+    },
+    "require": {
+        "php": "~7.1",
+        "simondeeley/type": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "simondeeley\\": "src/"
+        }
+    }
+}
