@@ -191,4 +191,9 @@ final class TupleTest extends TestCase
  */
 final class _testTuple extends Tuple {
     const MAX_LENGTH = 4;
+
+    final public static function getType(): string
+    {
+        return '_testTuple';
+    }
 }
