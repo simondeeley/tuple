@@ -80,10 +80,14 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
         }
 
         if (0 === count(
-            array_udiff($this->data, $tuple->data, function($a, $b) {
-                return (int) strcmp(serialize($a), serialize($b));
-            })
-        )) {
+            array_udiff(
+                $this->data->toArray(),
+                $tuple->data->toArray(),
+                function($a, $b) {
+                    return (int) strcmp(serialize($a), serialize($b));
+                })
+            ))
+        {
             return true;
         }
 
