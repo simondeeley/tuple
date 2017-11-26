@@ -53,7 +53,7 @@ final class TupleTest extends TestCase
      *
      * @test
      * @expectedException OutOfRangeException
-     * @expectedExceptionMessage Size of _testTuple exceeds the maximum of 4 items
+     * @expectedExceptionMessage Size of simondeeley\Tests\_testTuple exceeds the maximum of 4 items
      * @final
      * @return void
      */
