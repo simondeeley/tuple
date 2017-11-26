@@ -142,7 +142,7 @@ final class TupleTest extends TestCase
     {
         return [
             ['string'],
-            [new stdClass()],
+            [new \stdClass()],
             [log(0)],
             [true],
             [null]

@@ -83,7 +83,7 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
             array_udiff(
                 $this->data->toArray(),
                 $tuple->data->toArray(),
-                function(array $a, array $b): int {
+                function($a, $b): int {
                     return (int) strcmp(md5(serialize($a)), md5(serialize($b)));
                 })
             ))
