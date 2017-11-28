@@ -18,7 +18,7 @@ Installation
 ============
 
 ```
-composer require simondeeley/type
+composer require simondeeley/tuple
 ```
 
 Usage
