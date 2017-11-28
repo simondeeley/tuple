@@ -88,8 +88,8 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
         if (0 === strcmp(
                 md5(serialize($this->data->toArray())),
                 md5(serialize($tuple->data->toArray())))
-            && $this->isSameTypeAs($type, $flags)
-            && $this->isSameObjectAs($type, $flags)
+            && $this->isSameTypeAs($tuple, $flags)
+            && $this->isSameObjectAs($tuple, $flags)
         ) {
             return true;
         }
