@@ -17,6 +17,7 @@ use simondeeley\Type\Type;
 use simondeeley\Type\TupleType;
 use simondeeley\Type\TypeEquality;
 use simondeeley\ImmutableArrayTypeObject;
+use simondeeley\Helpers\TypeEqualityHelperMethods;
 
 /**
  * Tuple base object
@@ -27,6 +28,8 @@ use simondeeley\ImmutableArrayTypeObject;
  */
 abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, TypeEquality
 {
+    use TypeEqualityHelperMethods;
+
     const MAX_LENGTH = PHP_INT_MAX;
 
     /**
@@ -66,9 +69,12 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
      * not equal to the other then the result will be considered false.
      *
      * @param Type $tuple - The tuple to compare
+     * @param int $flags - optional bitwise flags to change method behaviour
+     * @throws InvalidArgumentException - thrown if $tuple is not an instance of
+     *                                    TupleType
      * @return bool - Returns true if $tuple is equal to $this
      */
-    final public function equals(Type $tuple): bool
+    final public function equals(Type $tuple, int $flags = TypeEquality::IGNORE_OBJECT_IDENTITY): bool
     {
         if (false === $tuple instanceof TupleType)
         {
@@ -80,8 +86,10 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
         }
 
         if (0 === strcmp(
-            md5(serialize($this->data->toArray())),
-            md5(serialize($tuple->data->toArray())))
+                md5(serialize($this->data->toArray())),
+                md5(serialize($tuple->data->toArray())))
+            && $this->isSameTypeAs($type, $flags)
+            && $this->isSameObjectAs($type, $flags)
         ) {
             return true;
         }
