@@ -128,4 +128,14 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
     {
         return $this->offsetExists($offset) ? $this->data[$offset] : null;
     }
+
+    /**
+     * Implement a basic getType
+     *
+     * @return string
+     */
+    public static function getType(): string
+    {
+        return 'TUPLE';
+    }
 }
