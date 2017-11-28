@@ -1,6 +1,7 @@
 {
     "name": "simondeeley/tuple",
     "description": "An extendable, reusable PHP tuple objet",
+    "version": "1.0.1",
     "type": "library",
     "keywords": ["php", "tuple", "extendable", "set"],
     "homepage": "https://github.com/simondeeley",
