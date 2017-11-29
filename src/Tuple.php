@@ -12,7 +12,7 @@ namespace simondeeley;
 
 use SplFixedArray;
 use InvalidArgumentException;
-use OutOfRangeException;
+use LengthException;
 use simondeeley\Type\Type;
 use simondeeley\Type\TupleType;
 use simondeeley\Type\TypeEquality;
@@ -31,6 +31,7 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
     use TypeEqualityHelperMethods;
 
     const MAX_LENGTH = PHP_INT_MAX;
+    const MIN_LENGTH = 0;
 
     /**
      * @var SplFixedArray $data
@@ -45,16 +46,27 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
      *
      * @param mixed ...$items - Variadic number of arguments
      * @return void
-     * @throws OutOfRangeException - Thrown if number of arguments passed
-     *                               exceeds maximum allowed amount
+     * @throws LengthException - Thrown if number of arguments passed exceeds
+     *                           the maximum or is less than the minimum allowed
+     *                           values.
      */
     final public function __construct(...$items)
     {
+        if (count($items) < static::MIN_LENGTH) {
+            throw new LengthException(sprintf(
+                '%s expects a minimum of %d arguments but only got %d',
+                $this::getType(),
+                static::MIN_LENGTH,
+                count($items)
+            ));
+        }
+
         if (count($items) > static::MAX_LENGTH) {
-            throw new OutOfRangeException(sprintf(
-                'Size of %s exceeds the maximum of %d items',
-                get_class($this),
-                static::MAX_LENGTH
+            throw new LengthException(sprintf(
+                '%s expects a maximum of %d arguments but instead got %d',
+                $his::getType(),
+                static::MAX_LENGTH,
+                count($items)
             ));
         }
 

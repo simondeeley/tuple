@@ -12,7 +12,7 @@ namespace simondeeley\Tests;
 
 use simondeeley\Tuple;
 use InvalidArgumentException;
-use OutOfRangeException;
+use LengthException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -49,17 +49,41 @@ final class TupleTest extends TestCase
     }
 
     /**
-     * Test throws Exception
+     * Test correctly instantiates with minimum items
      *
      * @test
-     * @expectedException OutOfRangeException
-     * @expectedExceptionMessage Size of simondeeley\Tests\_testTuple exceeds the maximum of 4 items
      * @final
      * @return void
      */
-    final public function shouldThrowException(): void
+    final public function instantiateWithMinimumItems(): void
+    {
+        $this->assertInstanceOf(Tuple::class, new _testTuple(1, 2));
+    }
+
+    /**
+     * Test throws Exception for too many arguments
+     *
+     * @test
+     * @expectedException LengthException
+     * @final
+     * @return void
+     */
+    final public function shouldThrowExceptionWhenTooManyArgumentsPassed(): void
     {
         $invalid = new _testTuple(1,2,3,4,5,6);
+    }
+
+    /**
+     * Test throws Exception for too few arguments
+     *
+     * @test
+     * @expectedException LengthException
+     * @final
+     * @return void
+     */
+    final public function shouldThrowExceptionWhenTooFewArgumentsPassed(): void
+    {
+        $invalid = new _testTuple(1);
     }
 
     /**
@@ -191,4 +215,5 @@ final class TupleTest extends TestCase
  */
 final class _testTuple extends Tuple {
     const MAX_LENGTH = 4;
+    const MIN_LENTH = 2;
 }
