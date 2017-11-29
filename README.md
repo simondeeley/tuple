@@ -60,6 +60,17 @@ $mixed = new Pair(1024, 'FooBar');
 $objects = new Pair($numeric, $strings);
 ```
 
+Example Tuples
+==============
+This package provides two pre-built tuples out-of-the box, [`Single`](https://github.com/simondeeley/type/blob/master/src/Tuples/Single.php) and ['Pair'](https://github.com/simondeeley/type/blob/master/src/Tuples/Pair.php) these provide functionality for _1_-tuple and _2_-tuple objects, respectively. Using them is very simple
+```php
+use simondeeley\Tuples\Single;
+use simondeeley\Tuples\Pair;
+
+$single = new Single('foo'); // Can only ever have one argument
+$pair = new Pair(10, 20); // Can only every have exactly two arguments
+```
+
 Testing Equality
 ================
 
