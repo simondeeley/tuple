@@ -202,7 +202,7 @@ final class TupleTest extends TestCase
             [new _testTuple(1,2,3), new _testTuple(3,2,1), false],
             [new _testTuple(1,2,3), new _testTuple(1,2,3,4), false],
             [new _testTuple('a'), new _testTuple('A'), false],
-            [new _testTuple(1), new _testTuple('1'), false],
+            [new _testTuple(1, 2), new _testTuple('1', 2), false],
             [new _testTuple(true, false), new _testTuple(true, false), true],
             [new _testTuple(false, false), new _testTuple(true, false), false]
         ];
