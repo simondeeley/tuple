@@ -39,7 +39,7 @@ abstract class TupleTestCase extends TestCase
      */
     final public function testCorrectStructureOfTupleObject(array $items): void
     {
-        $tuple = new static::$class(extract($items, EXTR_PREFIX_ALL, 'test'));
+        $tuple = new static::$class(...$items);
 
         $this->assertInstanceOf(static::$class, $tuple);
         $this->assertInstanceOf(TupleType::class, $tuple);
@@ -60,7 +60,7 @@ abstract class TupleTestCase extends TestCase
      */
     final public function testExceptionForTooFewArguments(array $items): void
     {
-        $tuple = new static::$class(extract($items, EXTR_PREFIX_ALL, 'test'));
+        $tuple = new static::$class(...$items);
     }
 
     /**
@@ -74,7 +74,7 @@ abstract class TupleTestCase extends TestCase
      */
     final public function testExceptionForTooManyArguments(array $items): void
     {
-        $tuple = new static::$class(extract($items, EXTR_PREFIX_ALL, 'test'));
+        $tuple = new static::$class(...$items);
     }
 
     /**
