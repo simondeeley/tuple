@@ -60,6 +60,8 @@ $mixed = new Pair(1024, 'FooBar');
 $objects = new Pair($numeric, $strings);
 ```
 
+As well as a maximum length value, you can also specify minimum length values. By setting the two values as the same, you effectively impose a exact requirement for the number of arguments a tuple can have. This is very useful for creating tuples that are true to their mathematical form, which brings us on to...
+
 Example Tuples
 ==============
 This package provides two pre-built tuples out-of-the box, [`Single`](https://github.com/simondeeley/type/blob/master/src/Tuples/Single.php) and [`Pair`](https://github.com/simondeeley/type/blob/master/src/Tuples/Pair.php) these provide functionality for _1_-tuple and _2_-tuple objects, respectively. Using them is very simple
