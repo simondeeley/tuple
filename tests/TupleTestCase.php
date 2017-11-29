@@ -107,6 +107,7 @@ abstract class TupleTestCase extends TestCase
         $tuple = new static::$class(...$items);
 
         $this->assertNull($tuple[PHP_INT_MAX]);
+        $this->assertNull($tuple[-1]);
     }
 
     /**
