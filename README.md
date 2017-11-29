@@ -60,7 +60,7 @@ $mixed = new Pair(1024, 'FooBar');
 $objects = new Pair($numeric, $strings);
 ```
 
-As well as a maximum length value, you can also specify minimum length values. By setting the two values as the same, you effectively impose a exact requirement for the number of arguments a tuple can have. This is very useful for creating tuples that are true to their mathematical form, which brings us on to...
+As well as a maximum length value, you can also specify minimum length values. By setting the two values as the same, you effectively impose an exact requirement for the number of arguments a tuple can have. This is very useful for creating tuples that are true to their mathematical form, which brings us on to...
 
 Example Tuples
 ==============
@@ -70,7 +70,7 @@ use simondeeley\Tuples\Single;
 use simondeeley\Tuples\Pair;
 
 $single = new Single('foo'); // Can only ever have one argument
-$pair = new Pair(10, 20); // Can only every have exactly two arguments
+$pair = new Pair(10, 20); // Can only ever have exactly two arguments
 ```
 
 Testing Equality
