@@ -10,7 +10,6 @@ declare(strict_types=1);
 
 namespace simondeeley\Tests;
 
-use LengthException;
 use PHPUnit\Framework\TestCase;
 use simondeeley\Type\TupleType;
 
@@ -82,7 +81,7 @@ abstract class TupleTestCase extends TestCase
      *
      * @test
      * @dataProvider provideCorrectArguments
-     * @expectedException LengthException
+     * @expectedException InvalidArgumentException
      * @final
      * @param array $items
      * @return void
@@ -95,11 +94,10 @@ abstract class TupleTestCase extends TestCase
     }
 
     /**
-     * Test that an exception is thrown when invalid offset is requested
+     * Test that null is returned for out-of-range offsets
      *
      * @test
      * @dataProvider provideCorrectArguments
-     * @expectedException LengthException
      * @final
      * @param array $items
      * @return void
@@ -108,7 +106,7 @@ abstract class TupleTestCase extends TestCase
     {
         $tuple = new static::$class(...$items);
 
-        $invalid = $tuple[PHP_INT_MAX];
+        $this->assertNull($tuple[PHP_INT_MAX]);
     }
 
     /**
