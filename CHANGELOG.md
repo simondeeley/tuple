@@ -1,3 +1,7 @@
+1.1.0
+=====
+* Add minimum length constraint to enforce Tuples with minimum sizes, or exact sizes by setting the values of `MAX_LENGTH` and `MIN_LENGTH` to the same value.
+
 1.0.1
 =====
 * Implement a default behaviour compatible with [`Type::getType`](https://github.com/simondeeley/type/blob/master/src/Type/Type.php)
