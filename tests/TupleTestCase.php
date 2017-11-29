@@ -42,6 +42,7 @@ abstract class TupleTestCase extends TestCase
 
         $this->assertInstanceOf(static::$class, $tuple);
         $this->assertInstanceOf(TupleType::class, $tuple);
+        $this->assertTrue($tuple->equals($tuple));
 
         foreach ($items as $key => $item) {
             $this->assertEquals($item, $tuple[$key]);
@@ -102,7 +103,7 @@ abstract class TupleTestCase extends TestCase
      * @param array $items
      * @return void
      */
-    final public function testExceptionThrownForInvalidOffset(array $items): void
+    final public function testNullReturnedForInvalidOffset(array $items): void
     {
         $tuple = new static::$class(...$items);
 
