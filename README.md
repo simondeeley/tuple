@@ -62,7 +62,7 @@ $objects = new Pair($numeric, $strings);
 
 Example Tuples
 ==============
-This package provides two pre-built tuples out-of-the box, [`Single`](https://github.com/simondeeley/type/blob/master/src/Tuples/Single.php) and ['Pair'](https://github.com/simondeeley/type/blob/master/src/Tuples/Pair.php) these provide functionality for _1_-tuple and _2_-tuple objects, respectively. Using them is very simple
+This package provides two pre-built tuples out-of-the box, [`Single`](https://github.com/simondeeley/type/blob/master/src/Tuples/Single.php) and [`Pair`](https://github.com/simondeeley/type/blob/master/src/Tuples/Pair.php) these provide functionality for _1_-tuple and _2_-tuple objects, respectively. Using them is very simple
 ```php
 use simondeeley\Tuples\Single;
 use simondeeley\Tuples\Pair;
