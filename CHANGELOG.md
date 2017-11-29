@@ -1,3 +1,7 @@
+1.0.1
+=====
+* Implement a default behaviour compatible with [`Type::getType`](https://github.com/simondeeley/type/blob/master/src/Type/Type.php)
+
 1.0.0
 =====
 Initial release.
