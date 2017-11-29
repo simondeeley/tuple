@@ -5,7 +5,7 @@ Reusable tuple object for PHP
 
 This package provides a tuple type object for PHP. It is based off [simondeeley\Type](https://github.com/simondeeley/type) package which provides immutable objects.
 
-> In [mathematics](https://en.wikipedia.org/wiki/Mathematics) a **tuple** is a finite ordered list (sequence) of [elements](https://en.wikipedia.org/wiki/Element_(mathematics)). An **_n_-tuple** is a [sequence](https://en.wikipedia.org/wiki/Sequence) (or ordered list) of n elements, where n is a non-negative integer.
+> In [mathematics](https://en.wikipedia.org/wiki/Mathematics) a **tuple** is a finite ordered list (sequence) of [elements](https://en.wikipedia.org/wiki/Element_(mathematics)). An **_n_-tuple** is a [sequence](https://en.wikipedia.org/wiki/Sequence) (or ordered list) of _n_ elements, where _n_ is a non-negative integer.
 >
 > –_[Wikipedia](https://en.wikipedia.org/wiki/Tuple)_
 
