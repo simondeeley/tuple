@@ -64,7 +64,7 @@ abstract class Tuple extends ImmutableArrayTypeObject implements TupleType, Type
         if (count($items) > static::MAX_LENGTH) {
             throw new LengthException(sprintf(
                 '%s expects a maximum of %d arguments but instead got %d',
-                $his::getType(),
+                $this::getType(),
                 static::MAX_LENGTH,
                 count($items)
             ));
