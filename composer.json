@@ -32,7 +32,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "simondeeley\\Tests": "tests/"
+            "simondeeley\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev",
