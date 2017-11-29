@@ -215,5 +215,5 @@ final class TupleTest extends TestCase
  */
 final class _testTuple extends Tuple {
     const MAX_LENGTH = 4;
-    const MIN_LENTH = 2;
+    const MIN_LENGTH = 2;
 }
