@@ -1,7 +1,6 @@
 {
     "name": "simondeeley/tuple",
     "description": "An extendable, reusable PHP tuple objet",
-    "version": "1.0.1",
     "type": "library",
     "keywords": ["php", "tuple", "extendable", "set"],
     "homepage": "https://github.com/simondeeley",
@@ -29,6 +28,12 @@
     "autoload": {
         "psr-4": {
             "simondeeley\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
         }
     }
 }
