@@ -30,6 +30,11 @@
             "simondeeley\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "simondeeley\\Tests": "tests/"
+        }
+    },
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
