@@ -1,9 +1,12 @@
 Reusable tuple object for PHP
 ==================================
 
-[![Build Status](https://travis-ci.org/simondeeley/tuple.svg?branch=master)](https://travis-ci.org/simondeeley/tuple)[![Latest Stable Version](https://poser.pugx.org/simondeeley/tuple/v/stable)](https://packagist.org/packages/simondeeley/tuple)[![Total Downloads](https://poser.pugx.org/simondeeley/tuple/downloads)](https://packagist.org/packages/simondeeley/tuple)[![Latest Unstable Version](https://poser.pugx.org/simondeeley/tuple/v/unstable)](https://packagist.org/packages/simondeeley/tuple)[![License](https://poser.pugx.org/simondeeley/tuple/license)](https://packagist.org/packages/simondeeley/tuple)
+[![Build Status](https://travis-ci.org/simondeeley/tuple.svg?branch=master)](https://travis-ci.org/simondeeley/tuple) [![Latest Stable Version](https://poser.pugx.org/simondeeley/tuple/v/stable)](https://packagist.org/packages/simondeeley/tuple) [![Total Downloads](https://poser.pugx.org/simondeeley/tuple/downloads)](https://packagist.org/packages/simondeeley/tuple) [![Latest Unstable Version](https://poser.pugx.org/simondeeley/tuple/v/unstable)](https://packagist.org/packages/simondeeley/tuple) [![License](https://poser.pugx.org/simondeeley/tuple/license)](https://packagist.org/packages/simondeeley/tuple)
 
-This package provides a tuple type object for PHP. It is based off [simondeeley\Type](https://github.com/simondeeley/type) package which provides immutable objects. Tuples are a mathematical object with a known length, more akin to a set in programming languages.
+This package provides a tuple type object for PHP. It is based off [simondeeley\Type](https://github.com/simondeeley/type) package which provides immutable objects.
+
+> In [mathematics](https://en.wikipedia.org/wiki/Mathematics) a **tuple** is a finite ordered list (sequence) of [elements](https://en.wikipedia.org/wiki/Element_(mathematics)). An **_n_-tuple** is a [sequence](https://en.wikipedia.org/wiki/Sequence) (or ordered list) of n elements, where n is a non-negative integer.
+> _[Wikipedia](https://en.wikipedia.org/wiki/Tuple)_
 
 An example of a tuple could be `[1, 2, 3, 4, 5]`. The order of the items in a tuple is important, so given a set of 'A' being `[1, 2, 3]` and 'B' also being `[1, 2, 3]` then it's true that A equals B. However if we have another set 'C' which is `[3, 2, 1]` then this is not equal to A (or B).
 
