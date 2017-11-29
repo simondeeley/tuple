@@ -78,6 +78,40 @@ abstract class TupleTestCase extends TestCase
     }
 
     /**
+     * Test that an exception is thrown when non-integer offset is requested
+     *
+     * @test
+     * @dataProvider provideCorrectArguments
+     * @expectedException LengthException
+     * @final
+     * @param array $items
+     * @return void
+     */
+    final public function testExceptionThrownForNonIntegerOffset(array $items): void
+    {
+        $tuple = new static::$class(...$items);
+
+        $invalid = $tuple['foo'];
+    }
+
+    /**
+     * Test that an exception is thrown when invalid offset is requested
+     *
+     * @test
+     * @dataProvider provideCorrectArguments
+     * @expectedException LengthException
+     * @final
+     * @param array $items
+     * @return void
+     */
+    final public function testExceptionThrownForInvalidOffset(array $items): void
+    {
+        $tuple = new static::$class(...$items);
+
+        $invalid = $tuple[PHP_INT_MAX];
+    }
+
+    /**
      * Data for tests
      *
      * @return array
