@@ -1,6 +1,7 @@
 1.1.0
 =====
 * Add minimum length constraint to enforce Tuples with minimum sizes, or exact sizes by setting the values of `MAX_LENGTH` and `MIN_LENGTH` to the same value.
+* Add [`Single`](https://github.com/simondeeley/type/blob/master/src/Tuples/Single.php) and ['Pair'](https://github.com/simondeeley/type/blob/master/src/Tuples/Pair.php) to provide out-of-the-box functionality for two simple tuple objects.
 
 1.0.1
 =====
