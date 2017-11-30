@@ -1,20 +1,21 @@
 language: php
 sudo: false
 
+git:
+  depth: 3
+
 matrix:
   include:
     - php: 7.1
-      env: TEST=stable
+    - php: 7.2
     - php: nightly
-      env: TEST=nightly
   fast_finish: true
 
 cache:
   - vendor
 
 before_script:
-  - if [ "$TEST" = "stable" ]; then phpenv config-rm xdebug.ini; fi
-  - composer install
+  - composer install --no-interaction
 
-script:
-  - phpdbg -qrr vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+after_script:
+  -  php tests/coverage.php clover.xml $COVERAGE

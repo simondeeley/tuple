@@ -1,3 +1,7 @@
+1.1.1
+=====
+* Update test suites to PHP 7.2 and include code coverage report
+
 1.1.0
 =====
 * Add minimum length constraint to enforce Tuples with minimum sizes, or exact sizes by setting the values of `MAX_LENGTH` and `MIN_LENGTH` to the same value.
