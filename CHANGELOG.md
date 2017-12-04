@@ -1,3 +1,7 @@
+1.1.2
+=====
+* Use scrutinizer-ci for reporting metrics
+
 1.1.1
 =====
 * Update test suites to PHP 7.2 and include code coverage report
