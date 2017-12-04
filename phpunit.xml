@@ -26,6 +26,9 @@
     </whitelist>
   </filter>
   <logging>
-    <log type="coverage-clover" target="./clover.xml"/>
+    <log type="coverage-clover"
+         target="./coverage.clover"
+         showUncoveredFiles="true"
+      />
   </logging>
 </phpunit>
